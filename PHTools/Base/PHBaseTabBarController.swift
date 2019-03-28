@@ -11,9 +11,9 @@ import UIKit
 public class PHBaseTabBarController: UITabBarController {
     
     
-    var tabbarItems: [(normalImg:String,selectedImg:String,title:String,normalTextColor:UIColor?,selectedTextColor:UIColor?,controller:BaseViewController)]?
+    var tabbarItems: [(normalImg:String,selectedImg:String,title:String,normalTextColor:UIColor?,selectedTextColor:UIColor?,controller:PHBaseViewController)]?
     
-    public convenience  init(params:[(normalImg:String,selectedImg:String,title:String,normalTextColor:UIColor?,selectedTextColor:UIColor?,controller:BaseViewController)]?) {
+    public convenience  init(params:[(normalImg:String,selectedImg:String,title:String,normalTextColor:UIColor?,selectedTextColor:UIColor?,controller:PHBaseViewController)]?) {
         self.init()
         
         if params != nil {
@@ -24,7 +24,7 @@ public class PHBaseTabBarController: UITabBarController {
         for item in tabbarItems!{
             
             let controller = item.controller
-            let navi : BaseNavigationController = BaseNavigationController.init(rootViewController: controller)
+            let navi : PHBaseNavigationController = PHBaseNavigationController.init(rootViewController: controller)
             
             navi.tabBarItem.title = item.title
             navi.tabBarItem.setTitleTextAttributes([NSAttributedStringKey.foregroundColor:item.normalTextColor as Any], for: .normal)

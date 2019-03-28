@@ -58,6 +58,15 @@ public extension UIColor{
     private static var _phNaviTitle : UIColor = UIColor.phBlackText
     public static var phNaviTitle: UIColor { get { return _phNaviTitle}set{_phNaviTitle=newValue}}
     
+    //返回随机颜色
+    public class var randomColor: UIColor {
+        get {
+            let red = CGFloat(arc4random()%256)/255.0
+            let green = CGFloat(arc4random()%256)/255.0
+            let blue = CGFloat(arc4random()%256)/255.0
+            return UIColor(red: red, green: green, blue: blue, alpha: 1.0)
+        }
+    }
 }
 
 // MARK: - 字体大小

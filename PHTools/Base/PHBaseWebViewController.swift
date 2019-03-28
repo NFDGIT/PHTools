@@ -8,7 +8,7 @@
 
 import UIKit
 import SnapKit
-public class PHBaseWebViewController: BaseViewController {
+public class PHBaseWebViewController: PHBaseViewController {
     public let webView : PHBaseWebView = PHBaseWebView.init()
     override public func viewDidLoad() {
         super.viewDidLoad()

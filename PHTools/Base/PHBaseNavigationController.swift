@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class BaseNavigationController: UINavigationController,UINavigationControllerDelegate {
+public class PHBaseNavigationController: UINavigationController,UINavigationControllerDelegate {
 
     override public func viewDidLoad() {
         super.viewDidLoad()

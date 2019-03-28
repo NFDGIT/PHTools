@@ -8,7 +8,7 @@
 
 import UIKit
 
-open class BaseViewController: UIViewController,UINavigationControllerDelegate  {
+open class PHBaseViewController: UIViewController,UINavigationControllerDelegate  {
     open var showNavi : Bool = true
     override open func viewDidLoad() {
         super.viewDidLoad()
@@ -50,12 +50,12 @@ open class BaseViewController: UIViewController,UINavigationControllerDelegate  
 }
 
 
-extension BaseViewController{
+extension PHBaseViewController{
     // MARK: 导航代理
-    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
-        navigationController.setNavigationBarHidden(!(viewController as! BaseViewController).showNavi, animated: true)
+    public func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+        navigationController.setNavigationBarHidden(!(viewController as! PHBaseViewController).showNavi, animated: true)
     }
-    func dial(phone:String) {
+    public func dial(phone:String) {
         let callWebview =   UIWebView()
         callWebview.loadRequest(NSURLRequest(url: URL(string: "tel:\(phone)")!) as URLRequest)
         self.view.addSubview(callWebview)

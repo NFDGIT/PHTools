@@ -19,7 +19,7 @@ import UIKit
 //}
 
 
-public class PHPageViewController:BaseViewController ,UIPageViewControllerDelegate,UIPageViewControllerDataSource{
+public class PHPageViewController:PHBaseViewController ,UIPageViewControllerDelegate,UIPageViewControllerDataSource{
 
 
     public var finishTransitionCallBack:((Int)->())?
