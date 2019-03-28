@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "PHTools"
   s.version      = "0.0.1"
-  s.summary      = "基于swift 的框架"
+  s.summary      = "A short description of PHTools."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,7 +25,6 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-       基于swift语言的iOS 框架
                    DESC
 
   s.homepage     = "https://github.com/NFDGIT/PHTools"
@@ -39,8 +38,8 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-#  s.license      = "MIT (example)"
-   s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  s.license      = "MIT (example)"
+  # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -80,7 +79,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/NFDGIT/PHTools.git", :tag => "#{s.version}" }
+  s.source       = { :git => "http://github/NFDGIT/PHTools.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -91,8 +90,8 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Classes", "PHTools/**/*.{swift}"
-  #  s.exclude_files = "Classes/Exclude"
+  s.source_files  = "Classes", "Classes/**/*.{h,m}"
+  s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
 
@@ -118,9 +117,9 @@ Pod::Spec.new do |s|
   #
 
   # s.framework  = "SomeFramework"
-  # s.frameworks = "SomeFramework", "AnotherFramework"
+  s.frameworks = "UIKit", "Foundation"
 
-  # s.library   = "iconv"
+  #s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
 
 
@@ -133,6 +132,11 @@ Pod::Spec.new do |s|
   # s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # s.dependency "JSONKit", "~> 1.4"
+  s.dependency 'SnapKit', '~> 4.2.0'
+  s.dependency 'Alamofire', '~> 4.7.3'
+  s.dependency 'SwiftyJSON', '~> 4.2.0'
+  s.dependency 'Kingfisher', '~> 4.10.0' 
+
+
 
 end
