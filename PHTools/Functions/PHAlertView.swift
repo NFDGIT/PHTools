@@ -60,35 +60,3 @@ open class PHAlertView: UIView {
     */
 
 }
-extension UIColor{
-    //返回随机颜色
-    public class var randomColor: UIColor {
-        get {
-            let red = CGFloat(arc4random()%256)/255.0
-            let green = CGFloat(arc4random()%256)/255.0
-            let blue = CGFloat(arc4random()%256)/255.0
-            return UIColor(red: red, green: green, blue: blue, alpha: 1.0)
-        }
-    }
-}
-extension UIView{
-    /**
-     Get the view's screen shot, this function may be called from any thread of your app.
-     
-     - returns: The screen shot's image.
-     */
-    public func screenShot() -> UIImage? {
-        
-        guard frame.size.height > 0 && frame.size.width > 0 else {
-            
-            return nil
-        }
-        
-        UIGraphicsBeginImageContextWithOptions(frame.size, false, 0)
-        layer.render(in: UIGraphicsGetCurrentContext()!)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        return image
-    }
-}

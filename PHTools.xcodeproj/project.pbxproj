@@ -26,6 +26,7 @@
 		8408F3B12249CCA400E2CF6F /* PHConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408F3A02249CCA400E2CF6F /* PHConstant.swift */; };
 		8408F3B22249CCA400E2CF6F /* PHCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408F3A12249CCA400E2CF6F /* PHCalendarView.swift */; };
 		8408F412224A0D2800E2CF6F /* Pods_PHTools.framework in Headers */ = {isa = PBXBuildFile; fileRef = 33E22A208EBB3804AE234763 /* Pods_PHTools.framework */; };
+		84506F3E224CCFE600780030 /* PHAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84506F3D224CCFE600780030 /* PHAlertView.swift */; };
 		FD46D76FB3B02AD72B2D1FC5 /* Pods_PHTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E22A208EBB3804AE234763 /* Pods_PHTools.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		8408F40C224A0D0F00E2CF6F /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8408F40E224A0D0F00E2CF6F /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8408F410224A0D0F00E2CF6F /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84506F3D224CCFE600780030 /* PHAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHAlertView.swift; sourceTree = "<group>"; };
 		8F8AD42CF4A0F1443FF42ED1 /* Pods-PHTools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PHTools.release.xcconfig"; path = "Pods/Target Support Files/Pods-PHTools/Pods-PHTools.release.xcconfig"; sourceTree = "<group>"; };
 		B0414F275FDF94FC495DDEC1 /* Pods-PHTools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PHTools.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PHTools/Pods-PHTools.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -146,6 +148,7 @@
 		8408F3982249CCA400E2CF6F /* Functions */ = {
 			isa = PBXGroup;
 			children = (
+				84506F3D224CCFE600780030 /* PHAlertView.swift */,
 				8408F3992249CCA400E2CF6F /* PHPlayerView.swift */,
 				8408F39A2249CCA400E2CF6F /* PHVideoRecord.swift */,
 				8408F39B2249CCA400E2CF6F /* PHLayoutView.swift */,
@@ -291,6 +294,7 @@
 				8408F3A92249CCA400E2CF6F /* ComponentExtension.swift in Sources */,
 				8408F3AA2249CCA400E2CF6F /* PHPlayerView.swift in Sources */,
 				8408F3AE2249CCA400E2CF6F /* PHPhotoBrowser.swift in Sources */,
+				84506F3E224CCFE600780030 /* PHAlertView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
