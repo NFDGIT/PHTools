@@ -52,7 +52,7 @@ open class PHBaseViewController: UIViewController,UINavigationControllerDelegate
 
 extension PHBaseViewController{
     // MARK: 导航代理
-    public func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+    open func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
         navigationController.setNavigationBarHidden(!(viewController as! PHBaseViewController).showNavi, animated: true)
     }
     public func dial(phone:String) {

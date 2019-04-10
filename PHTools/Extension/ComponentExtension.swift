@@ -12,96 +12,11 @@ import WebKit
 class ComponentExtension: NSObject {
 
 }
-struct ComponentAssociatedKeys {
 
 
-    static var tabbarItemsKey: String = "tabbarItemsKey"
-    static var buttonEventCallBackKey: String = "buttonEventCallBackKey"
-
-    static var UITableViewDatasKey: String = "UITableViewDatasKey"
-    static var UITableViewCellIndexPathKey: String = "UITableViewCellIndexPathKey"
-    
-    static var UITextFieldMarginKey: String = "UITextFieldMarginKey"
-    static var UITextFieldSpaceKey: String = "UITextFieldSpaceKey"
-
+struct UIButtonAssociatedKeys {
+    static var eventCallBack: String = "eventCallBack"
 }
-extension UIViewController{
-
-    
-    
-}
-// tabbar  的拓展
-public extension UITabBarController{//
-
-//     var tabbarItems: [(normalImg:String,selectedImg:String,title:String,normalTextColor:UIColor?,selectedTextColor:UIColor?,controller:BaseViewController)]? {
-//        get {
-//            let items = objc_getAssociatedObject(self, &ComponentAssociatedKeys.tabbarItemsKey) as? [(normalImg:String,selectedImg:String,title:String,normalTextColor:UIColor?,selectedTextColor:UIColor?,controller:BaseViewController)]
-//            return items
-//        }
-//        set {
-//            objc_setAssociatedObject(self, &ComponentAssociatedKeys.tabbarItemsKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-//        }
-//    }
-//    
-//    convenience  init(params:[(normalImg:String,selectedImg:String,title:String,normalTextColor:UIColor?,selectedTextColor:UIColor?,controller:BaseViewController)]?) {
-//        self.init()
-//
-//        if params != nil {
-//            tabbarItems = params
-//        }
-//
-//        let vcs : NSMutableArray = NSMutableArray.init()
-//        for item in tabbarItems!{
-//            
-//            let controller = item.controller
-//            let navi : BaseNavigationController = BaseNavigationController.init(rootViewController: controller)
-//        
-//            navi.tabBarItem.title = item.title
-//            navi.tabBarItem.setTitleTextAttributes([NSAttributedStringKey.foregroundColor:item.normalTextColor as Any], for: .normal)
-//            navi.tabBarItem.setTitleTextAttributes([NSAttributedStringKey.foregroundColor:item.selectedTextColor as Any], for: .selected)
-//            
-//            navi.tabBarItem.image = UIImage.init(named: item.normalImg)?.withRenderingMode(.alwaysOriginal)
-//        
-//            
-//            navi.tabBarItem.selectedImage = UIImage.init(named: item.selectedImg)?.withRenderingMode(.alwaysOriginal)
-//    
-//            vcs.add(navi)
-//        }
-//        self.viewControllers = (vcs as! [UIViewController])
-//    }
-//    func custom()  {
-////        let customTabbar : PHTabbarView = PHTabbarView.init()
-////        self.tabBar.addSubview(customTabbar)
-////        customTabbar.snp.makeConstraints { (make) in
-////            make.left.top.right.equalToSuperview()
-////            make.bottom.equalToSuperview().offset(-Bottom_Tool_Height())
-////        }
-////
-////        let temDatas  = NSMutableArray.init()
-////        for item in self.tabbarItems! {
-////
-////            let btn : UIButton = UIButton.init(normalTitle: item.title, normalImg: UIImage.init(named: "未选中"), selectedImg: UIImage.init(named: "选中"), normalTextColor: UIColor.phBlackText, selectedTextColor: UIColor.red,normalBgImg:UIImage.phInit(color: UIColor.white),selectedBgImg:UIImage.phInit(color: UIColor.phBgContent),font: UIFont.phSmall)
-////            temDatas.add(btn)
-////
-////
-////        }
-////
-////
-////        customTabbar.datas = (temDatas as! [UIButton])
-////        for (index,item) in (customTabbar.datas?.enumerated())! {
-////            item.phImagePosition(at: index % 2 == 0 ? .top : .bottom, space: SCALE(size: 5))
-////        }
-////
-////        customTabbar.callBack = { index in
-////            self.selectedIndex = index
-////        }
-////
-////
-//    }
-
-    
-}
-
 public extension UIButton{
     // MARK: UIButton的初始化方法
      public convenience  init(normalTitle:String?=nil,selectedTitle:String? = nil,normalImg:UIImage? = nil,selectedImg:UIImage? = nil,normalTextColor:UIColor?=nil,selectedTextColor:UIColor? = nil,normalBgImg:UIImage? = nil,selectedBgImg:UIImage? = nil,font:UIFont?=nil)  {
@@ -194,10 +109,10 @@ public extension UIButton{
     // MARK: --  添加点击事件
     var eventCallBack: ((UIButton)->())? {
         get {
-            return objc_getAssociatedObject(self, &ComponentAssociatedKeys.buttonEventCallBackKey) as? ((UIButton) -> ())
+            return objc_getAssociatedObject(self, &UIButtonAssociatedKeys.eventCallBack) as? ((UIButton) -> ())
         }
         set {
-            objc_setAssociatedObject(self, &ComponentAssociatedKeys.buttonEventCallBackKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, &UIButtonAssociatedKeys.eventCallBack, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
     public func phAddTarget(events:UIControlEvents, callBack:@escaping ((UIButton)->()))  {
@@ -269,28 +184,33 @@ public extension UIView{
     }
 
 }
-
+struct UITableViewAssociatedKeys {
+    static var datas: String = "datas"
+}
 public extension UITableView {
     var datas: Array<Any>{
         get{
-            let value = objc_getAssociatedObject(self, &ComponentAssociatedKeys.UITableViewDatasKey)
+            let value = objc_getAssociatedObject(self, &UITableViewAssociatedKeys.datas)
             if  (value != nil) {
                 return value as! Array<Any>
             }
             return  Array.init()
         }
         set{
-            objc_setAssociatedObject(self, &ComponentAssociatedKeys.UITableViewDatasKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, &UITableViewAssociatedKeys.datas, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
+}
+struct UITableViewCellAssociatedKeys  {
+    static var indexPath: String = "indexPath"
 }
 public extension UITableViewCell{
     var indexPath: IndexPath? {
         get {
-            return (objc_getAssociatedObject(self, &ComponentAssociatedKeys.UITableViewCellIndexPathKey) as! IndexPath)
+            return (objc_getAssociatedObject(self, &UITableViewCellAssociatedKeys.indexPath) as! IndexPath)
         }
         set {
-            objc_setAssociatedObject(self, &ComponentAssociatedKeys.UITableViewCellIndexPathKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, &UITableViewCellAssociatedKeys.indexPath, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
 }

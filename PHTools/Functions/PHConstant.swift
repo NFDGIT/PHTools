@@ -12,14 +12,13 @@ public class PHConstant: NSObject {
 
     
 }
-
 /// 尺寸的适配
 ///
 /// - Parameter size: 适配前的尺寸
 /// - Returns: 适配后的尺寸
-public func SCALE(size:CGFloat) -> CGFloat{
-//    return size * ((UIScreen.main.bounds.height > 568) ? UIScreen.main.bounds.height/568.00 : 1)
-//    return size * (UIScreen.main.bounds.height/568.00)
+public func SCALE( size:CGFloat) -> CGFloat{
+    //    return size * ((UIScreen.main.bounds.height > 568) ? UIScreen.main.bounds.height/568.00 : 1)
+    //    return size * (UIScreen.main.bounds.height/568.00)
     return size
 }
 public func isIPhoneXType() -> Bool {

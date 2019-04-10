@@ -52,10 +52,6 @@
 		8408F39F2249CCA400E2CF6F /* PHCarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHCarouselView.swift; sourceTree = "<group>"; };
 		8408F3A02249CCA400E2CF6F /* PHConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHConstant.swift; sourceTree = "<group>"; };
 		8408F3A12249CCA400E2CF6F /* PHCalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHCalendarView.swift; sourceTree = "<group>"; };
-		8408F40A224A0D0F00E2CF6F /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8408F40C224A0D0F00E2CF6F /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8408F40E224A0D0F00E2CF6F /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8408F410224A0D0F00E2CF6F /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84506F3D224CCFE600780030 /* PHAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHAlertView.swift; sourceTree = "<group>"; };
 		8F8AD42CF4A0F1443FF42ED1 /* Pods-PHTools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PHTools.release.xcconfig"; path = "Pods/Target Support Files/Pods-PHTools/Pods-PHTools.release.xcconfig"; sourceTree = "<group>"; };
 		B0414F275FDF94FC495DDEC1 /* Pods-PHTools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PHTools.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PHTools/Pods-PHTools.debug.xcconfig"; sourceTree = "<group>"; };
@@ -76,10 +72,6 @@
 		735434A64A45BF9634CDDE2D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8408F40A224A0D0F00E2CF6F /* Alamofire.framework */,
-				8408F40C224A0D0F00E2CF6F /* Kingfisher.framework */,
-				8408F40E224A0D0F00E2CF6F /* SnapKit.framework */,
-				8408F410224A0D0F00E2CF6F /* SwiftyJSON.framework */,
 				33E22A208EBB3804AE234763 /* Pods_PHTools.framework */,
 			);
 			name = Frameworks;
@@ -435,7 +427,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = PHTools/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -469,7 +461,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = PHTools/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
