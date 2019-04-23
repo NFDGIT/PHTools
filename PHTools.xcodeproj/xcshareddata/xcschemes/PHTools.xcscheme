@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "57C3F400A1E3949393B59938333C9767"
-               BuildableName = "Pods_PHTools.framework"
-               BlueprintName = "Pods-PHTools"
-               ReferencedContainer = "container:Pods.xcodeproj">
+               BlueprintIdentifier = "8408F37D2249C90300E2CF6F"
+               BuildableName = "PHTools.framework"
+               BlueprintName = "PHTools"
+               ReferencedContainer = "container:PHTools.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,10 +45,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "57C3F400A1E3949393B59938333C9767"
-            BuildableName = "Pods_PHTools.framework"
-            BlueprintName = "Pods-PHTools"
-            ReferencedContainer = "container:Pods.xcodeproj">
+            BlueprintIdentifier = "8408F37D2249C90300E2CF6F"
+            BuildableName = "PHTools.framework"
+            BlueprintName = "PHTools"
+            ReferencedContainer = "container:PHTools.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -60,6 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "8408F37D2249C90300E2CF6F"
+            BuildableName = "PHTools.framework"
+            BlueprintName = "PHTools"
+            ReferencedContainer = "container:PHTools.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

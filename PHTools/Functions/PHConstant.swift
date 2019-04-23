@@ -38,27 +38,27 @@ public func Bottom_Tool_Height() -> CGFloat{//
 public extension UIColor{
     
     
-    public class var phBgContent: UIColor { get{ return UIColor.init(red: 245/255.0, green: 245/255.0, blue: 245/255.0, alpha: 1)} } //  背景颜色
+    class var phBgContent: UIColor { get{ return UIColor.init(red: 245/255.0, green: 245/255.0, blue: 245/255.0, alpha: 1)} } //  背景颜色
     
 //    字体颜色
     
     /// 红色
-    public class var phRed: UIColor { get{ return UIColor.init(red: 231/255.0, green: 41/255.0, blue: 47/255.0, alpha: 1)} } //
+    class var phRed: UIColor { get{ return UIColor.init(red: 231/255.0, green: 41/255.0, blue: 47/255.0, alpha: 1)} } //
     ///  黑色字体
-    public class var phBlackText: UIColor { get{ return UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.8)} } //
+    class var phBlackText: UIColor { get{ return UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.8)} } //
     ///  浅灰色字体
-    public class var phLightGrayText: UIColor { get{ return UIColor.init(red: 0.3, green: 0.3, blue: 0.3, alpha: 0.8)} } //
+    class var phLightGrayText: UIColor { get{ return UIColor.init(red: 0.3, green: 0.3, blue: 0.3, alpha: 0.8)} } //
     
     
     ///  导航颜色
     private static var _phNaviBg : UIColor = UIColor.white
-    public static var phNaviBg: UIColor {get{return _phNaviBg}set{_phNaviBg = newValue}}
+    static var phNaviBg: UIColor {get{return _phNaviBg}set{_phNaviBg = newValue}}
     ///  导航字体
     private static var _phNaviTitle : UIColor = UIColor.phBlackText
-    public static var phNaviTitle: UIColor { get { return _phNaviTitle}set{_phNaviTitle=newValue}}
+    static var phNaviTitle: UIColor { get { return _phNaviTitle}set{_phNaviTitle=newValue}}
     
     //返回随机颜色
-    public class var randomColor: UIColor {
+    class var randomColor: UIColor {
         get {
             let red = CGFloat(arc4random()%256)/255.0
             let green = CGFloat(arc4random()%256)/255.0
@@ -70,16 +70,16 @@ public extension UIColor{
 
 // MARK: - 字体大小
 public extension UIFont{
-    public class var phBig: UIFont { get{ return UIFont.systemFont(ofSize: SCALE(size: 18))} }   //  大号字体
-    public class var phMiddle: UIFont { get{ return UIFont.systemFont(ofSize: SCALE(size: 16))} }   //  中号号字体
-    public class var phSmall: UIFont { get{ return UIFont.systemFont(ofSize: SCALE(size: 14))} } //小号字体
+    class var phBig: UIFont { get{ return UIFont.systemFont(ofSize: SCALE(size: 18))} }   //  大号字体
+    class var phMiddle: UIFont { get{ return UIFont.systemFont(ofSize: SCALE(size: 16))} }   //  中号号字体
+    class var phSmall: UIFont { get{ return UIFont.systemFont(ofSize: SCALE(size: 14))} } //小号字体
 }
 
 
 
 
 public extension PHConstant{
-    public static var isLogin : Bool{
+    static var isLogin : Bool{
         get{
             return UserDefaults.standard.bool(forKey: "isLogin")
         }
@@ -87,7 +87,7 @@ public extension PHConstant{
             UserDefaults.standard.set(newValue, forKey: "isLogin")
         }
     }
-    public static func getRandomNumber(min:Int,max:Int) -> Int {
+    static func getRandomNumber(min:Int,max:Int) -> Int {
         let randomNumber:Int = Int(arc4random_uniform(UInt32(max - min))) + min
         return randomNumber
     }

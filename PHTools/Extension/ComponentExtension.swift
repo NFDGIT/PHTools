@@ -19,13 +19,13 @@ struct UIButtonAssociatedKeys {
 }
 public extension UIButton{
     // MARK: UIButton的初始化方法
-     public convenience  init(normalTitle:String?=nil,selectedTitle:String? = nil,normalImg:UIImage? = nil,selectedImg:UIImage? = nil,normalTextColor:UIColor?=nil,selectedTextColor:UIColor? = nil,normalBgImg:UIImage? = nil,selectedBgImg:UIImage? = nil,font:UIFont?=nil)  {
+    convenience  init(normalTitle:String?=nil,selectedTitle:String? = nil,normalImg:UIImage? = nil,selectedImg:UIImage? = nil,normalTextColor:UIColor?=nil,selectedTextColor:UIColor? = nil,normalBgImg:UIImage? = nil,selectedBgImg:UIImage? = nil,font:UIFont?=nil)  {
         self.init()
         
         self.phInitialize(normalTitle: normalTitle, selectedTitle: selectedTitle, normalImg: normalImg, selectedImg: selectedImg, normalTextColor: normalTextColor, selectedTextColor: selectedTextColor,normalBgImg: normalBgImg,selectedBgImg: selectedBgImg, font: font)
     }
     // MARK: UIButton的一些常用参数的初始化
-    public func  phInitialize(normalTitle:String? = nil,selectedTitle:String? = nil,normalImg:UIImage? = nil,selectedImg:UIImage? = nil,normalTextColor:UIColor?=nil,selectedTextColor:UIColor? = nil,normalBgImg:UIImage? = nil,selectedBgImg:UIImage? = nil,font:UIFont?=nil) {
+    func  phInitialize(normalTitle:String? = nil,selectedTitle:String? = nil,normalImg:UIImage? = nil,selectedImg:UIImage? = nil,normalTextColor:UIColor?=nil,selectedTextColor:UIColor? = nil,normalBgImg:UIImage? = nil,selectedBgImg:UIImage? = nil,font:UIFont?=nil) {
 
         self.setTitle(normalTitle, for: .normal)
         self.setImage(normalImg, for: .normal)
@@ -62,7 +62,7 @@ public extension UIButton{
     /// - Parameters:
     ///   - style: 样式
     ///   - space: 间距
-    public func phImagePosition(at style: PHButtonImageEdgeInsetsStyle, space: CGFloat) {
+    func phImagePosition(at style: PHButtonImageEdgeInsetsStyle, space: CGFloat) {
         guard let imageV = imageView else { return }
         guard let titleL = titleLabel else { return }
         //获取图像的宽和高
@@ -115,7 +115,7 @@ public extension UIButton{
             objc_setAssociatedObject(self, &UIButtonAssociatedKeys.eventCallBack, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
-    public func phAddTarget(events:UIControl.Event, callBack:@escaping ((UIButton)->()))  {
+    func phAddTarget(events:UIControl.Event, callBack:@escaping ((UIButton)->()))  {
         self.addTarget(self, action: #selector(method(sender:)), for: events)
         self.eventCallBack = { sender in
             callBack(sender)
@@ -126,7 +126,7 @@ public extension UIButton{
     }
 }
 public extension UIScrollView{
-    public func addEmptyView(emptyView:UIView)  {
+    func addEmptyView(emptyView:UIView)  {
         emptyView.tag = 100001
         emptyView.isHidden = true
         self.addSubview(emptyView)
@@ -136,7 +136,7 @@ public extension UIScrollView{
             make.width.height.equalToSuperview()
         }
     }
-    public func setIsEmpty(isEmpty:Bool) {
+    func setIsEmpty(isEmpty:Bool) {
         let emptyView = self.viewWithTag(100001)
         if  emptyView != nil {
             emptyView?.isHidden = !isEmpty
@@ -149,7 +149,7 @@ public extension UIScrollView{
 }
 public extension UIView{
 
-    public func phLayer(cornerRadius:CGFloat,borderWidth:CGFloat,borderColor:UIColor? = nil) {
+    func phLayer(cornerRadius:CGFloat,borderWidth:CGFloat,borderColor:UIColor? = nil) {
         if  cornerRadius  != 0{
             self.layer.cornerRadius = cornerRadius
             self.layer.masksToBounds = true
@@ -159,7 +159,7 @@ public extension UIView{
             self.layer.borderColor = borderColor!.cgColor
         }
     }
-    public func phView( backGroundColor:UIColor?) {
+    func phView( backGroundColor:UIColor?) {
         self.backgroundColor = backGroundColor
     }
     
@@ -168,7 +168,7 @@ public extension UIView{
      
      - returns: The screen shot's image.
      */
-    public func screenShot() -> UIImage? {
+    func screenShot() -> UIImage? {
         
         guard frame.size.height > 0 && frame.size.width > 0 else {
             
@@ -233,7 +233,7 @@ public extension UICollectionViewCell{
 
 public extension UIImage{
     
-       public static func phInit(color:UIColor) -> UIImage {
+    static func phInit(color:UIColor) -> UIImage {
         
         let rect: CGRect = CGRect(x: 0, y: 0, width: 10, height: 10)
         
@@ -255,7 +255,7 @@ public extension UIImage{
 }
 
 public extension WKWebView{
-    public static func phInit()  -> WKWebView{
+    static func phInit()  -> WKWebView{
     
         let config : WKWebViewConfiguration = WKWebViewConfiguration()
         config.userContentController = WKUserContentController.init()
