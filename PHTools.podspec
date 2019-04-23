@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "PHTools"
-  s.version      = "0.0.1.0"
-  s.summary      = " 自定义库 swift 版 iOS 开发所需要的常用工具 （包括base类，拓展工具，常用值）"
+  s.version      = "0.0.1.0.1"
+  s.summary      = " 自定义库 swift 框架"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,7 +25,8 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-             自定义 swift 框架  
+            自定义库 swift 版 iOS 开发所需要的常用工具 （包括base类，拓
+展工具，常用值)
                    DESC
 
   s.homepage     = "https://github.com/NFDGIT/PHTools"

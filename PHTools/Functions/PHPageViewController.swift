@@ -29,8 +29,8 @@ public class PHPageViewController:PHBaseViewController ,UIPageViewControllerDele
     public var numberOfViewController:(()->(Int))?
     public var viewControllerForPage:((Int)->(UIViewController))?
     
-    public var transitionStyle : UIPageViewControllerTransitionStyle = .scroll
-    public var navigationOrientation : UIPageViewControllerNavigationOrientation = .horizontal
+    public var transitionStyle : UIPageViewController.TransitionStyle = .scroll
+    public var navigationOrientation : UIPageViewController.NavigationOrientation = .horizontal
     
     public var pageVC : UIPageViewController?
     
@@ -47,7 +47,7 @@ public class PHPageViewController:PHBaseViewController ,UIPageViewControllerDele
         
         pageVC = UIPageViewController.init(transitionStyle: self.transitionStyle, navigationOrientation: self.navigationOrientation, options: nil)
 
-        self.addChildViewController(pageVC!)
+        self.addChild(pageVC!)
         self.view.addSubview(pageVC!.view)
         pageVC!.delegate = self
         pageVC!.dataSource = self
@@ -128,7 +128,7 @@ extension PHPageViewController{
         return getVC(page: (pageViewController.viewControllers?.first?.phPageNum)! + 1)
 
     }
-    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+    public func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         if (finishTransitionCallBack != nil)
         {
             finishTransitionCallBack!((pageViewController.viewControllers?.first?.phPageNum)!)

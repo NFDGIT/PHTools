@@ -39,7 +39,7 @@ public extension UIButton{
         
         self.titleLabel?.font = font
         
-        self.imageView?.contentMode = UIViewContentMode.center
+        self.imageView?.contentMode = UIView.ContentMode.center
         
     }
     
@@ -115,7 +115,7 @@ public extension UIButton{
             objc_setAssociatedObject(self, &UIButtonAssociatedKeys.eventCallBack, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
-    public func phAddTarget(events:UIControlEvents, callBack:@escaping ((UIButton)->()))  {
+    public func phAddTarget(events:UIControl.Event, callBack:@escaping ((UIButton)->()))  {
         self.addTarget(self, action: #selector(method(sender:)), for: events)
         self.eventCallBack = { sender in
             callBack(sender)
@@ -130,7 +130,7 @@ public extension UIScrollView{
         emptyView.tag = 100001
         emptyView.isHidden = true
         self.addSubview(emptyView)
-        self.bringSubview(toFront: emptyView)
+        self.bringSubviewToFront(emptyView)
         emptyView.snp.makeConstraints { (make) in
             make.left.top.equalToSuperview()
             make.width.height.equalToSuperview()

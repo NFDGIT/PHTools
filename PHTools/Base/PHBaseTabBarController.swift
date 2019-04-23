@@ -27,8 +27,8 @@ public class PHBaseTabBarController: UITabBarController {
             let navi : PHBaseNavigationController = PHBaseNavigationController.init(rootViewController: controller)
             
             navi.tabBarItem.title = item.title
-            navi.tabBarItem.setTitleTextAttributes([NSAttributedStringKey.foregroundColor:item.normalTextColor as Any], for: .normal)
-            navi.tabBarItem.setTitleTextAttributes([NSAttributedStringKey.foregroundColor:item.selectedTextColor as Any], for: .selected)
+            navi.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor:item.normalTextColor as Any], for: .normal)
+            navi.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor:item.selectedTextColor as Any], for: .selected)
             
             navi.tabBarItem.image = UIImage.init(named: item.normalImg)?.withRenderingMode(.alwaysOriginal)
             

@@ -15,7 +15,7 @@ public class PHBaseNavigationController: UINavigationController,UINavigationCont
 
         // Do any additional setup after loading the view.
     }
-    override public var childViewControllerForStatusBarStyle: UIViewController?{
+    override public var childForStatusBarStyle: UIViewController?{
         return self.topViewController
     }
    

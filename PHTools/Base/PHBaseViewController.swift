@@ -17,7 +17,7 @@ open class PHBaseViewController: UIViewController,UINavigationControllerDelegate
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.tintColor = UIColor.phNaviTitle
         self.navigationController?.navigationBar.barTintColor = UIColor.phNaviBg
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.phNaviTitle]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.phNaviTitle]
         
         
         
