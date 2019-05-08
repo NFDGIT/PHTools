@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
- platform :ios, '9.0'
+ platform :ios, '10.0'
 
 target 'PHTools' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
@@ -7,7 +7,8 @@ target 'PHTools' do
 
   # Pods for PHTools
   pod 'SnapKit', '~> 4.2.0'
-  pod 'Alamofire', '~> 4.7.3'
-  pod 'SwiftyJSON', '~> 4.2.0'
-  pod 'Kingfisher', '~> 4.10.0'
+  pod 'Alamofire', '~> 5.0.0-beta.5'
+  pod 'SwiftyJSON', '~> 5.0.0'
+  pod 'Kingfisher', '~> 5.0.0'
+  
 end
