@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "PHTools"
-  s.version      = "0.0.1.3"
+  s.version      = "0.0.1.4"
   s.summary      = " 自定义库 swift 框架"
   s.description  = <<-DESC
             自定义库 swift 版 iOS 开发所需要的常用工具 （包括base类，拓

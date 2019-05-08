@@ -13,6 +13,7 @@ import SwiftyJSON
 public class PHNetTool: NSObject {
     public static func post(url:String,param:[String:Any]? = nil,response:@escaping ((_ res:(success:Bool,msg:String,data:Dictionary<String, Any>))->(Void)))
     {
+        
         Alamofire.request(url, method: .post, parameters: param, encoding: URLEncoding.default, headers: nil).responseJSON { (res) in
             var resultDic : NSMutableDictionary = NSMutableDictionary.init()
 
@@ -53,6 +54,7 @@ public class PHNetTool: NSObject {
         //                "file"
         //        "123456.mp4"
         //        "video/mp4"
+    
         Alamofire.upload(
             //同样采用post表单上传
             multipartFormData: { multipartFormData in
