@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.frameworks = "UIKit", "Foundation"
 
   s.dependency 'SnapKit', '~> 5.0.0'
-  s.dependency 'Alamofire', '~> 5.0.0-beta.5'
+  s.dependency 'Alamofire', '~> 4.8.2'
   s.dependency 'SwiftyJSON', '~> 5.0.0'
   s.dependency 'Kingfisher', '~> 5.3.1' 
 
