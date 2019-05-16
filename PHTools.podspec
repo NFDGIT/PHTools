@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "PHTools"
-  s.version      = "0.0.1.4"
+  s.version      = "0.0.1.5"
   s.summary      = " 自定义库 swift 框架"
   s.description  = <<-DESC
             自定义库 swift 版 iOS 开发所需要的常用工具 （包括base类，拓
@@ -18,10 +18,10 @@ Pod::Spec.new do |s|
   s.source_files  = "Classes", "PHTools/**/*.{swift}"
   s.frameworks = "UIKit", "Foundation"
 
-  s.dependency 'SnapKit', '~> 4.2.0'
+  s.dependency 'SnapKit', '~> 5.0.0'
   s.dependency 'Alamofire', '~> 5.0.0-beta.5'
   s.dependency 'SwiftyJSON', '~> 5.0.0'
-  s.dependency 'Kingfisher', '~> 5.0.0' 
+  s.dependency 'Kingfisher', '~> 5.3.1' 
 
 
 
